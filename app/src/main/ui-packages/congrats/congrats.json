@@ -1,0 +1,169 @@
+{
+  "name": "congrats",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "NnY5JkMtqKhVqHu7id8Y2D",
+    "node": "210:2404",
+    "version": "4528628065",
+    "component-id": "63aac1f74bf119928671508d9cde68cf378721c5"
+  },
+  "default": "congrats",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "image",
+        "id": "Clip path group"
+      },
+      {
+        "type": "image",
+        "id": "Mask group"
+      },
+      {
+        "type": "image",
+        "id": "Home"
+      },
+      {
+        "type": "image",
+        "id": "New game"
+      }
+    ],
+    "modes": {
+      "congrats": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "Clip path group",
+              "Mask group",
+              "Home",
+              "New game"
+            ]
+          },
+          {
+            "id": "Clip path group",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "393.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "809.6005859375"
+              }
+            },
+            "image-content": "clip_path_group.png",
+            "scale": "cover"
+          },
+          {
+            "id": "Mask group",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "-1.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "58.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "393.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "280.7412109375"
+              }
+            },
+            "image-content": "mask_group.png",
+            "scale": "cover"
+          },
+          {
+            "id": "Home",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "29.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "571.0"
+              }
+            },
+            "tap-handler": "$on Home ",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "165.7435302734375"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "95.818359375"
+              }
+            },
+            "image-content": "home.png",
+            "scale": "cover"
+          },
+          {
+            "id": "New game",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "209.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "571.0"
+              }
+            },
+            "tap-handler": "$on New game",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "159.7630615234375"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "90.87939453125"
+              }
+            },
+            "image-content": "new_game.png",
+            "scale": "cover"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "on Home ": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "on New game": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "congrats",
+      "size": {
+        "width": 393.0,
+        "height": 811.0
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}
