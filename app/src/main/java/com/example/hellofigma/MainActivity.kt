@@ -16,29 +16,29 @@
 
 package com.example.hellofigma
 
+import ai.onnxruntime.OnnxTensor
+import ai.onnxruntime.OrtEnvironment
+import ai.onnxruntime.OrtSession
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.hellofigma.ui.theme.HelloFigmaTheme
-import com.example.hellofigma.mainpage.MainPage
-import com.example.hellofigma.hintpage.HintPage
-import com.example.hellofigma.addchallenge.AddChallenge
-import com.example.hellofigma.hint1.Hint1
-import com.example.hellofigma.creategame.CreateGame
-import com.example.hellofigma.congrats.Congrats
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import android.util.Log
-
+import com.example.hellofigma.addchallenge.AddChallenge
+import com.example.hellofigma.congrats.Congrats
+import com.example.hellofigma.creategame.CreateGame
+import com.example.hellofigma.hint1.Hint1
+import com.example.hellofigma.hintpage.HintPage
+import com.example.hellofigma.mainpage.MainPage
+import com.example.hellofigma.ui.theme.HelloFigmaTheme
+import java.nio.FloatBuffer
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -99,6 +99,22 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+    // Start of model
+    private val ortEnvironment = OrtEnvironment.getEnvironment()
+
+    private fun createORTSession(): OrtSession {
+        val modelBytes = resources.openRawResource(R.raw.svm_trained_model).readBytes()
+        return ortEnvironment.createSession(modelBytes)
+    }
+
+    private fun runPrediction(input : Float, ortSession: OrtSession, ortEnvironment: OrtEnvironment) : Float {
+        val inputName = ortSession.inputNames?.iterator()?.next()
+        val floatBufferInputs = FloatBuffer.wrap( floatArrayOf( input ) )
+        val inputTensor = OnnxTensor.createTensor( ortEnvironment , floatBufferInputs , longArrayOf( 1, 1 ) )
+        val results = ortSession.run( mapOf( inputName to inputTensor ) )
+        val output = results[0].value as Array<FloatArray>
+        return output[0][0]
     }
 }
 @Composable
