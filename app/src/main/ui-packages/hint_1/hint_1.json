@@ -4,9 +4,9 @@
   "source-key": {
     "type": "figma",
     "file": "NnY5JkMtqKhVqHu7id8Y2D",
-    "node": "210:2403",
-    "version": "4528624034",
-    "component-id": "78b589f018c3472c58693b55fda4f4ae5d34ae4a"
+    "node": "215:2580",
+    "version": "4528966452",
+    "component-id": "9382c4e9369de573ffb064217033b51629a2b63f"
   },
   "default": "Hint 1",
   "design": {
@@ -17,11 +17,27 @@
         "root": "true"
       },
       {
+        "type": "image",
+        "id": "6"
+      },
+      {
+        "type": "image",
+        "id": "7"
+      },
+      {
+        "type": "image",
+        "id": "bunny"
+      },
+      {
+        "type": "image",
+        "id": "junction"
+      },
+      {
         "type": "vector",
         "id": "Vector"
       },
       {
-        "type": "vector",
+        "type": "image",
         "id": "Vector1"
       },
       {
@@ -39,6 +55,14 @@
       {
         "type": "image",
         "id": "ChallengeBox"
+      },
+      {
+        "type": "text",
+        "id": "Some challenge"
+      },
+      {
+        "type": "text",
+        "id": "10"
       }
     ],
     "modes": {
@@ -48,13 +72,119 @@
             "id": "top_level",
             "is-structured": "false",
             "children": [
+              "6",
+              "7",
+              "bunny",
+              "junction",
               "Vector",
               "Vector1",
               "Unlock",
               "challenge",
               "Hint box",
-              "ChallengeBox"
+              "ChallengeBox",
+              "Some challenge",
+              "10"
             ]
+          },
+          {
+            "id": "6",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "84.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "181.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "220.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "248.0"
+              }
+            },
+            "image-content": "6.png",
+            "scale": "cover"
+          },
+          {
+            "id": "7",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "84.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "181.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "220.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "248.0"
+              }
+            },
+            "image-content": "7.png",
+            "scale": "cover"
+          },
+          {
+            "id": "bunny",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "84.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "181.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "220.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "248.0"
+              }
+            },
+            "image-content": "bunny.png",
+            "scale": "cover"
+          },
+          {
+            "id": "junction",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "82.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "181.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "222.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "248.0"
+              }
+            },
+            "image-content": "junction.png",
+            "scale": "cover"
           },
           {
             "id": "Vector",
@@ -75,24 +205,28 @@
           },
           {
             "id": "Vector1",
-            "margin": {
-              "left": "82.0",
-              "top": "181.0",
-              "right": "82.8408203125",
-              "bottom": "364.0927734375"
-            },
-            "tap-handler": "$on Vector",
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "proportional",
-                "value": "1.0"
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "82.0"
               },
-              "height-constraints": {
-                "sizing-mode": "proportional",
-                "value": "1.0"
+              "vertical": {
+                "attachment": "start",
+                "offset": "181.0"
               }
             },
-            "vector-content": "vector1.svg"
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "222.1591796875"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "247.9072265625"
+              }
+            },
+            "image-content": "vector1.png",
+            "scale": "cover"
           },
           {
             "id": "Unlock",
@@ -194,19 +328,95 @@
             },
             "image-content": "challenge_box.png",
             "scale": "cover"
+          },
+          {
+            "id": "Some challenge",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "122.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "518.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "168.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "50.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$Challenge",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "20.0",
+            "line-height": "1.3029999732971191",
+            "typeface": "Inika"
+          },
+          {
+            "id": "10",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "123.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "576.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "144.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "32.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$count ",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-size": "24.0",
+            "line-height": "1.3029999732971191",
+            "typeface": "Inika"
           }
         ]
       }
     }
   },
   "parameters": {
-    "on Vector": {
+    "on Unlock": {
       "data-type": "void-callback",
       "required": false,
       "description": ""
     },
-    "on Unlock": {
-      "data-type": "void-callback",
+    "Challenge": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "count ": {
+      "data-type": "text",
       "required": false,
       "description": ""
     }
@@ -217,6 +427,10 @@
       "size": {
         "width": 387.0,
         "height": 793.0
+      },
+      "parameters": {
+        "Challenge": "Some challenge",
+        "count ": "10"
       }
     }
   ],

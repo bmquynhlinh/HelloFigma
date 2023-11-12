@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "NnY5JkMtqKhVqHu7id8Y2D",
     "node": "204:2533",
-    "version": "4528619717",
+    "version": "4528815946",
     "component-id": "6e7f2653840e6ec047b51e6d3059d2ecf4ca8533"
   },
   "default": "MainPage",
@@ -61,7 +61,7 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "404.0"
+                "value": "423.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
@@ -168,8 +168,8 @@
     {
       "design": "MainPage",
       "size": {
-        "width": 385.0,
-        "height": 800.0
+        "width": 402.0,
+        "height": 807.0
       }
     }
   ],

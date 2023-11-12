@@ -4,9 +4,9 @@
   "source-key": {
     "type": "figma",
     "file": "NnY5JkMtqKhVqHu7id8Y2D",
-    "node": "205:4169",
-    "version": "4528621033",
-    "component-id": "723aea1872168d7e03ba5b67f1f95a886a2a5b7f"
+    "node": "216:2616",
+    "version": "4528816788",
+    "component-id": "7f38b348579379afb8b0e78c165789bb9e2f81a0"
   },
   "default": "HintPage",
   "design": {
@@ -43,6 +43,22 @@
       {
         "type": "image",
         "id": "Hint box"
+      },
+      {
+        "type": "image",
+        "id": "7"
+      },
+      {
+        "type": "image",
+        "id": "bunny"
+      },
+      {
+        "type": "image",
+        "id": "6"
+      },
+      {
+        "type": "image",
+        "id": "junction"
       }
     ],
     "modes": {
@@ -58,7 +74,11 @@
               "Hint 4",
               "Hint 2",
               "Claim",
-              "Hint box"
+              "Hint box",
+              "7",
+              "bunny",
+              "6",
+              "junction"
             ],
             "background-color": {
               "alpha": "1.0",
@@ -235,6 +255,106 @@
               }
             },
             "image-content": "hint_box.png",
+            "scale": "cover"
+          },
+          {
+            "id": "7",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "203.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "198.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "160.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "152.0"
+              }
+            },
+            "image-content": "7.png",
+            "scale": "cover"
+          },
+          {
+            "id": "bunny",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "21.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "374.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "162.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "159.0"
+              }
+            },
+            "image-content": "bunny.png",
+            "scale": "cover"
+          },
+          {
+            "id": "6",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "24.2822265625"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "196.8984375"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "161.549560546875"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "154.4423828125"
+              }
+            },
+            "image-content": "6.png",
+            "scale": "cover"
+          },
+          {
+            "id": "junction",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "211.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "374.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "163.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "156.0"
+              }
+            },
+            "image-content": "junction.png",
             "scale": "cover"
           }
         ]

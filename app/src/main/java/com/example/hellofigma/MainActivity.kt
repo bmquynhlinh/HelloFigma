@@ -16,9 +16,6 @@
 
 package com.example.hellofigma
 
-import ai.onnxruntime.OnnxTensor
-import ai.onnxruntime.OrtEnvironment
-import ai.onnxruntime.OrtSession
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -26,6 +23,8 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
@@ -34,11 +33,9 @@ import androidx.navigation.compose.rememberNavController
 import com.example.hellofigma.addchallenge.AddChallenge
 import com.example.hellofigma.congrats.Congrats
 import com.example.hellofigma.creategame.CreateGame
-import com.example.hellofigma.hint1.Hint1
 import com.example.hellofigma.hintpage.HintPage
 import com.example.hellofigma.mainpage.MainPage
 import com.example.hellofigma.ui.theme.HelloFigmaTheme
-import java.nio.FloatBuffer
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +43,14 @@ class MainActivity : ComponentActivity() {
             HelloFigmaTheme {
                 // Set up the NavHost with a NavController
                 val navController = rememberNavController()
+                val challenge1 = "Example data for Hint1"
+                val count1 = "0"
+                val challenge2 = "Example data for Hint2"
+                val count2 = "0"
+                val challenge3 = "Example data for Hint3"
+                val count3 = "0"
+                val challenge4 = "Example data for Hint4"
+                val count4 = "0"
 
                 NavHost(
                     navController = navController,
@@ -60,17 +65,63 @@ class MainActivity : ComponentActivity() {
                     }
                     composable("hintPage") {
                             HintPage(modifier = Modifier.fillMaxSize(),
-                                onHint1 = {(navController.navigate("hintChild"))},
-                                onHint2 = {(navController.navigate("hintChild"))},
-                                onHint3 = {(navController.navigate("hintChild"))},
-                                onHint4 = {(navController.navigate("hintChild"))},
-                                onClaim = {(navController.navigate("congratPage"))}
+                                onHint1 = {(navController.navigate("hintChild1"))},
+                                onHint2 = {(navController.navigate("hintChild2"))},
+                                onHint3 = {(navController.navigate("hintChild3"))},
+                                onHint4 = {(navController.navigate("hintChild4"))},
+                                onClaim = {(navController.navigate("congratPage"))},
                                 )
                     }
-                    composable("hintChild") {
-                        Hint1(modifier = Modifier.fillMaxSize(),
-                            onVector = {},
-                            onUnlock = {(navController.navigate("hintPage"))}
+
+                    composable("hintChild1") {
+                        val (imageId, setImageId) = remember { mutableStateOf(R.drawable.hint_1_vector1) }
+                        HintFlipPage(modifier = Modifier.fillMaxSize(),
+                            challenge = challenge1,
+                            count = count1,
+                            onVector = {
+                                setImageId(R.drawable.hint_1_6)
+                            },
+                            onUnlock = {(navController.navigate("hintPage"))} ,
+                            initialImageId = imageId
+
+                        )
+                    }
+                    composable("hintChild2") {
+                        val (imageId, setImageId) = remember { mutableStateOf(R.drawable.hint_1_vector1) }
+                        HintFlipPage(modifier = Modifier.fillMaxSize(),
+                            challenge = challenge2,
+                            count = count2,
+                            onVector = {
+                                setImageId(R.drawable.hint_1_7)
+                            },
+                            onUnlock = {(navController.navigate("hintPage"))} ,
+                            initialImageId = imageId
+
+                        )
+                    }
+                    composable("hintChild3") {
+                        val (imageId, setImageId) = remember { mutableStateOf(R.drawable.hint_1_vector1) }
+                        HintFlipPage(modifier = Modifier.fillMaxSize(),
+                            challenge = challenge3,
+                            count = count4,
+                            onVector = {
+                                setImageId(R.drawable.hint_1_bunny)
+                            },
+                            onUnlock = {(navController.navigate("hintPage"))} ,
+                            initialImageId = imageId
+
+                        )
+                    }
+                    composable("hintChild4") {
+                        val (imageId, setImageId) = remember { mutableStateOf(R.drawable.hint_1_vector1) }
+                        HintFlipPage(modifier = Modifier.fillMaxSize(),
+                            challenge = challenge1,
+                            count = count1,
+                            onVector = {
+                                setImageId(R.drawable.hint_1_junction)
+                            },
+                            onUnlock = {(navController.navigate("hintPage"))} ,
+                            initialImageId = imageId
 
                         )
                     }
@@ -101,22 +152,128 @@ class MainActivity : ComponentActivity() {
         }
     }
     // Start of model
-    private val ortEnvironment = OrtEnvironment.getEnvironment()
+//    val sensorIntent = Intent(this, SensorActivity::class.java)
 
-    private fun createORTSession(): OrtSession {
-        val modelBytes = resources.openRawResource(R.raw.svm_trained_model).readBytes()
-        return ortEnvironment.createSession(modelBytes)
-    }
-
-    private fun runPrediction(input : Float, ortSession: OrtSession, ortEnvironment: OrtEnvironment) : Float {
-        val inputName = ortSession.inputNames?.iterator()?.next()
-        val floatBufferInputs = FloatBuffer.wrap( floatArrayOf( input ) )
-        val inputTensor = OnnxTensor.createTensor( ortEnvironment , floatBufferInputs , longArrayOf( 1, 1 ) )
-        val results = ortSession.run( mapOf( inputName to inputTensor ) )
-        val output = results[0].value as Array<FloatArray>
-        return output[0][0]
-    }
+//    private val ortEnvironment = OrtEnvironment.getEnvironment()
+//
+//    private fun createORTSession(): OrtSession {
+//        val modelBytes = resources.openRawResource(R.raw.svm_trained_model).readBytes()
+//        return ortEnvironment.createSession(modelBytes)
+//    }
+//
+//    private fun runPrediction(input : Float, ortSession: OrtSession, ortEnvironment: OrtEnvironment) : Float {
+//        val inputName = ortSession.inputNames?.iterator()?.next()
+//        val floatBufferInputs = FloatBuffer.wrap( floatArrayOf( input ) )
+//        val inputTensor = OnnxTensor.createTensor( ortEnvironment , floatBufferInputs , longArrayOf( 1, 1 ) )
+//        val results = ortSession.run( mapOf( inputName to inputTensor ) )
+//        val output = results[0].value as Array<FloatArray>
+//        return output[0][0]
+//    }
 }
+
+
+//
+//class SensorActivity : AppCompatActivity() {
+//
+//    private lateinit var sensorManager: SensorManager
+//    private var accelerometerSensor: Sensor? = null
+//    private var gyroscopeSensor: Sensor? = null
+//    private var linearAccelerationSensor: Sensor? = null
+//
+//    private val accelerometerListener = object : SensorEventListener {
+//        override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
+//            // Not needed for this example
+//        }
+//
+//        override fun onSensorChanged(event: SensorEvent) {
+//            // Handle accelerometer data in event.values
+//            val x = event.values[0]
+//            val y = event.values[1]
+//            val z = event.values[2]
+//
+//            // Process or display the accelerometer data as needed
+//        }
+//    }
+//
+//    private val gyroscopeListener = object : SensorEventListener {
+//        override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
+//            // Not needed for this example
+//        }
+//
+//        override fun onSensorChanged(event: SensorEvent) {
+//            // Handle gyroscope data in event.values
+//            val x = event.values[0]
+//            val y = event.values[1]
+//            val z = event.values[2]
+//
+//            // Process or display the gyroscope data as needed
+//        }
+//    }
+//
+//    private val linearAccelerationListener = object : SensorEventListener {
+//        override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
+//            // Not needed for this example
+//        }
+//
+//        override fun onSensorChanged(event: SensorEvent) {
+//            // Handle linear acceleration data in event.values
+//            val x = event.values[0]
+//            val y = event.values[1]
+//            val z = event.values[2]
+//
+//            // Process or display the linear acceleration data as needed
+//        }
+//    }
+//
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
+//
+//        // Get the sensors
+//        accelerometerSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+//        gyroscopeSensor = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE)
+//        linearAccelerationSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION)
+//    }
+//
+//    override fun onResume() {
+//        super.onResume()
+//
+//        // Register sensor listeners
+//        accelerometerSensor?.let {
+//            sensorManager.registerListener(
+//                accelerometerListener,
+//                it,
+//                SensorManager.SENSOR_DELAY_NORMAL
+//            )
+//        }
+//
+//        gyroscopeSensor?.let {
+//            sensorManager.registerListener(
+//                gyroscopeListener,
+//                it,
+//                SensorManager.SENSOR_DELAY_NORMAL
+//            )
+//        }
+//
+//        linearAccelerationSensor?.let {
+//            sensorManager.registerListener(
+//                linearAccelerationListener,
+//                it,
+//                SensorManager.SENSOR_DELAY_NORMAL
+//            )
+//        }
+//    }
+//
+//    override fun onPause() {
+//        super.onPause()
+//
+//        // Unregister sensor listeners
+//        sensorManager.unregisterListener(accelerometerListener)
+//        sensorManager.unregisterListener(gyroscopeListener)
+//        sensorManager.unregisterListener(linearAccelerationListener)
+//    }
+//}
+
 @Composable
 fun Greeting(name: String) {
     Text(text = "Hello $name!")
