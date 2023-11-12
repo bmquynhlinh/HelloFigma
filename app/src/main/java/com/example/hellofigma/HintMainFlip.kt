@@ -2,9 +2,7 @@ package com.example.hellofigma
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.material3.MaterialTheme
@@ -41,10 +39,14 @@ fun HintMainFlipPage(
         modifier = Modifier.fillMaxSize()
     ) {
         HintPage(modifier = Modifier.fillMaxSize(), onClaim = onClaim)
-        Hint1(isOpen1 = hintState.onOpen1, onHint1 = onHint1, modifier = Modifier.boxAlign(alignment = Alignment.TopStart, offset = DpOffset(x = 21.0.dp, y = 157.0.dp)))
-        Hint3(isOpen1 = hintState.onOpen3, onHint1 = onHint3, modifier = Modifier.boxAlign(alignment = Alignment.TopStart, offset = DpOffset(x = 18.0.dp, y = 337.0.dp)))
-        Hint4(isOpen1 = hintState.onOpen4, onHint1 = onHint4, modifier = Modifier.boxAlign(alignment = Alignment.TopStart, offset = DpOffset(x = 216.0.dp, y = 337.0.dp)))
-        Hint2(isOpen1 = hintState.onOpen2, onHint1 = onHint2, modifier = Modifier.boxAlign(alignment = Alignment.TopStart, offset = DpOffset(x = 200.0.dp, y = 157.0.dp)))
+        Hint1(isOpen1 = hintState.onOpen1, onHint1 = onHint1, modifier = Modifier.boxAlign(alignment = Alignment.TopStart, offset = DpOffset( x = 24.0.dp,
+            y = 198.0.dp)))
+        Hint3(isOpen1 = hintState.onOpen3, onHint1 = onHint3, modifier = Modifier.boxAlign(alignment = Alignment.TopStart, offset = DpOffset(  x = 21.0.dp,
+            y = 374.0.dp)))
+        Hint4(isOpen1 = hintState.onOpen4, onHint1 = onHint4, modifier = Modifier.boxAlign(alignment = Alignment.TopStart, offset = DpOffset( x = 211.0.dp,
+            y = 374.0.dp)))
+        Hint2(isOpen1 = hintState.onOpen2, onHint1 = onHint2, modifier = Modifier.boxAlign(alignment = Alignment.TopStart, offset = DpOffset(x = 203.0.dp,
+            y = 198.0.dp)))
     }
 }
 
@@ -84,10 +86,7 @@ fun Hint1(
         contentScale = ContentScale.Crop,
         modifier = modifier
             .clickable { onHint1() }
-            .requiredWidth(173.962890625.dp)
-            .requiredHeight(211.6123046875.dp)
-            .fillMaxWidth(1.0f)
-            .fillMaxHeight(1.0f)
+            .requiredWidth(161.549560546875.dp).requiredHeight(154.4423828125.dp)
     )
 }
 
@@ -104,10 +103,7 @@ fun Hint2(
         contentScale = ContentScale.Crop,
         modifier = modifier
             .clickable { onHint1() }
-            .requiredWidth(173.962890625.dp)
-            .requiredHeight(211.6123046875.dp)
-            .fillMaxWidth(1.0f)
-            .fillMaxHeight(1.0f)
+            .requiredWidth(160.0.dp).requiredHeight(152.0.dp)
     )
 }
 
@@ -124,10 +120,7 @@ fun Hint3(
         contentScale = ContentScale.Crop,
         modifier = modifier
             .clickable { onHint1() }
-            .requiredWidth(173.962890625.dp)
-            .requiredHeight(211.6123046875.dp)
-            .fillMaxWidth(1.0f)
-            .fillMaxHeight(1.0f)
+            .requiredWidth(162.0.dp).requiredHeight(159.0.dp)
     )
 }
 
@@ -144,9 +137,6 @@ fun Hint4(
         contentScale = ContentScale.Crop,
         modifier = modifier
             .clickable { onHint1() }
-            .requiredWidth(173.962890625.dp)
-            .requiredHeight(211.6123046875.dp)
-            .fillMaxWidth(1.0f)
-            .fillMaxHeight(1.0f)
+            .requiredWidth(163.0.dp).requiredHeight(156.0.dp)
     )
 }

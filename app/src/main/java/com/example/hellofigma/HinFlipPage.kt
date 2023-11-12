@@ -21,6 +21,7 @@ import com.google.relay.compose.RelayImage
 
 @Composable
 fun HintFlipPage(
+    hintState: HintState,
     modifier: Modifier = Modifier,
     challenge: String = "",
     count: String = "",
@@ -59,6 +60,12 @@ private fun HintFlipPreview() {
     MaterialTheme {
         RelayContainer {
             HintFlipPage(
+                hintState = HintState(
+                    onOpen1 = false,
+                    onOpen2 = false,
+                    onOpen3 = false,
+                    onOpen4 = false
+                ),
                 onVector = {},
                 onUnlock = {},
                 challenge = "Some challenge",
