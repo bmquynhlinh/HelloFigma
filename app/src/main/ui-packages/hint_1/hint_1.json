@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "NnY5JkMtqKhVqHu7id8Y2D",
     "node": "215:2580",
-    "version": "4528966452",
+    "version": "4529008730",
     "component-id": "9382c4e9369de573ffb064217033b51629a2b63f"
   },
   "default": "Hint 1",
@@ -15,6 +15,10 @@
         "type": "group",
         "id": "top_level",
         "root": "true"
+      },
+      {
+        "type": "image",
+        "id": "Vector"
       },
       {
         "type": "image",
@@ -34,10 +38,6 @@
       },
       {
         "type": "vector",
-        "id": "Vector"
-      },
-      {
-        "type": "image",
         "id": "Vector1"
       },
       {
@@ -72,11 +72,11 @@
             "id": "top_level",
             "is-structured": "false",
             "children": [
+              "Vector",
               "6",
               "7",
               "bunny",
               "junction",
-              "Vector",
               "Vector1",
               "Unlock",
               "challenge",
@@ -85,6 +85,31 @@
               "Some challenge",
               "10"
             ]
+          },
+          {
+            "id": "Vector",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "82.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "181.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "222.1591796875"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "247.9072265625"
+              }
+            },
+            "image-content": "vector.png",
+            "scale": "cover"
           },
           {
             "id": "6",
@@ -187,7 +212,7 @@
             "scale": "cover"
           },
           {
-            "id": "Vector",
+            "id": "Vector1",
             "margin": {
               "top": "2.0"
             },
@@ -201,32 +226,7 @@
                 "value": "1.0"
               }
             },
-            "vector-content": "vector.svg"
-          },
-          {
-            "id": "Vector1",
-            "alignment": {
-              "horizontal": {
-                "attachment": "start",
-                "offset": "82.0"
-              },
-              "vertical": {
-                "attachment": "start",
-                "offset": "181.0"
-              }
-            },
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "222.1591796875"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "247.9072265625"
-              }
-            },
-            "image-content": "vector1.png",
-            "scale": "cover"
+            "vector-content": "vector1.svg"
           },
           {
             "id": "Unlock",

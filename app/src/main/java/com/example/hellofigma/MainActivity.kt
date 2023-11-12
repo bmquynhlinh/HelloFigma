@@ -33,7 +33,6 @@ import androidx.navigation.compose.rememberNavController
 import com.example.hellofigma.addchallenge.AddChallenge
 import com.example.hellofigma.congrats.Congrats
 import com.example.hellofigma.creategame.CreateGame
-import com.example.hellofigma.hintpage.HintPage
 import com.example.hellofigma.mainpage.MainPage
 import com.example.hellofigma.ui.theme.HelloFigmaTheme
 class MainActivity : ComponentActivity() {
@@ -52,6 +51,13 @@ class MainActivity : ComponentActivity() {
                 val challenge4 = "Example data for Hint4"
                 val count4 = "0"
 
+                var hintStage = HintState(
+                    onOpen1 = false,
+                    onOpen2 = false,
+                    onOpen3 = false,
+                    onOpen4 = false
+                )
+
                 NavHost(
                     navController = navController,
                     startDestination = "mainPage"
@@ -64,30 +70,44 @@ class MainActivity : ComponentActivity() {
                             )
                     }
                     composable("hintPage") {
-                            HintPage(modifier = Modifier.fillMaxSize(),
-                                onHint1 = {(navController.navigate("hintChild1"))},
-                                onHint2 = {(navController.navigate("hintChild2"))},
-                                onHint3 = {(navController.navigate("hintChild3"))},
-                                onHint4 = {(navController.navigate("hintChild4"))},
-                                onClaim = {(navController.navigate("congratPage"))},
-                                )
+                        HintMainFlipPage(
+                            modifier = Modifier.fillMaxSize(),
+                            onHint1 = {(navController.navigate("hintChild1"))},
+                            onHint3 = {(navController.navigate("hintChild3"))},
+                            onHint4 = {(navController.navigate("hintChild4"))},
+                            onHint2 = {(navController.navigate("hintChild2"))},
+                            onClaim = {(navController.navigate("congratPage"))},
+                            hintState = hintStage,
+                        )
                     }
 
                     composable("hintChild1") {
-                        val (imageId, setImageId) = remember { mutableStateOf(R.drawable.hint_1_vector1) }
+                        val (imageId, setImageId) = remember { mutableStateOf(R.drawable.hint_1_vector) }
+                        val (hintState, setHintState) = remember {
+                            mutableStateOf(
+                                HintState(
+                                    onOpen1 = false,
+                                    onOpen2 = false,
+                                    onOpen3 = false,
+                                    onOpen4 = false
+                                )
+                            )
+                        }
                         HintFlipPage(modifier = Modifier.fillMaxSize(),
                             challenge = challenge1,
                             count = count1,
                             onVector = {
                                 setImageId(R.drawable.hint_1_6)
                             },
-                            onUnlock = {(navController.navigate("hintPage"))} ,
+                            onUnlock = {
+                                setHintState(hintState.copy(onOpen1 = true))
+                                (navController.navigate("hintPage"))} ,
                             initialImageId = imageId
 
                         )
                     }
                     composable("hintChild2") {
-                        val (imageId, setImageId) = remember { mutableStateOf(R.drawable.hint_1_vector1) }
+                        val (imageId, setImageId) = remember { mutableStateOf(R.drawable.hint_1_vector) }
                         HintFlipPage(modifier = Modifier.fillMaxSize(),
                             challenge = challenge2,
                             count = count2,
@@ -100,10 +120,10 @@ class MainActivity : ComponentActivity() {
                         )
                     }
                     composable("hintChild3") {
-                        val (imageId, setImageId) = remember { mutableStateOf(R.drawable.hint_1_vector1) }
+                        val (imageId, setImageId) = remember { mutableStateOf(R.drawable.hint_1_vector) }
                         HintFlipPage(modifier = Modifier.fillMaxSize(),
                             challenge = challenge3,
-                            count = count4,
+                            count = count3,
                             onVector = {
                                 setImageId(R.drawable.hint_1_bunny)
                             },
@@ -113,10 +133,10 @@ class MainActivity : ComponentActivity() {
                         )
                     }
                     composable("hintChild4") {
-                        val (imageId, setImageId) = remember { mutableStateOf(R.drawable.hint_1_vector1) }
+                        val (imageId, setImageId) = remember { mutableStateOf(R.drawable.hint_1_vector) }
                         HintFlipPage(modifier = Modifier.fillMaxSize(),
-                            challenge = challenge1,
-                            count = count1,
+                            challenge = challenge4,
+                            count = count4,
                             onVector = {
                                 setImageId(R.drawable.hint_1_junction)
                             },

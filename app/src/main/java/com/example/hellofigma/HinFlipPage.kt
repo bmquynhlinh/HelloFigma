@@ -2,21 +2,20 @@ package com.example.hellofigma
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import com.example.hellofigma.hint1.Hint1
+import com.google.relay.compose.BoxScopeInstance.boxAlign
 import com.google.relay.compose.RelayContainer
 import com.google.relay.compose.RelayImage
 
@@ -40,8 +39,14 @@ fun HintFlipPage(
             count = count,
             onUnlock = onUnlock
         )
-        Vector1(onVector = onVector,
-                modifier= modifier,
+        HintImage(onVector = onVector,
+                modifier= Modifier.boxAlign(
+                    alignment = Alignment.TopStart,
+                    offset = DpOffset(
+                        x = 82.0.dp,
+                        y = 181.0.dp
+                    )
+                ),
                 initialImageId=initialImageId)
 
     }
@@ -50,7 +55,7 @@ fun HintFlipPage(
 }
 @Preview(widthDp = 387, heightDp = 793)
 @Composable
-private fun Hint1Preview() {
+private fun HintFlipPreview() {
     MaterialTheme {
         RelayContainer {
             HintFlipPage(
@@ -59,17 +64,17 @@ private fun Hint1Preview() {
                 challenge = "Some challenge",
                 count = "10",
                 modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f),
-                initialImageId = R.drawable.hint_1_vector1,
+                initialImageId = R.drawable.hint_1_vector,
             )
         }
     }
 }
 
 @Composable
-fun Vector1(
+fun HintImage(
     onVector: () -> Unit,
     modifier: Modifier = Modifier,
-    initialImageId: Int = R.drawable.hint_1_vector1
+    initialImageId: Int = R.drawable.hint_1_vector
 ) {
     var pictureID = initialImageId
 
@@ -77,14 +82,6 @@ fun Vector1(
         image = painterResource(pictureID),
         contentScale = ContentScale.Crop,
         modifier = modifier
-            .padding(
-                paddingValues = PaddingValues(
-                    start = 82.0.dp,
-                    top = 183.0.dp,
-                    end = 82.8408203125.dp,
-                    bottom = 364.0927734375.dp
-                )
-            )
             .clickable {
                 // On click, update the image ID
                 pictureID = initialImageId
@@ -92,8 +89,6 @@ fun Vector1(
             }
             .requiredWidth(222.1591796875.dp)
             .requiredHeight(247.9072265625.dp)
-            .fillMaxWidth(1.0f)
-            .fillMaxHeight(1.0f)
     )
 }
 
