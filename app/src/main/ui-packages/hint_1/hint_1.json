@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "NnY5JkMtqKhVqHu7id8Y2D",
     "node": "215:2580",
-    "version": "4529008730",
+    "version": "4529123816",
     "component-id": "9382c4e9369de573ffb064217033b51629a2b63f"
   },
   "default": "Hint 1",
@@ -22,19 +22,19 @@
       },
       {
         "type": "image",
-        "id": "6"
+        "id": "place"
       },
       {
         "type": "image",
-        "id": "7"
+        "id": "0"
       },
       {
         "type": "image",
-        "id": "bunny"
+        "id": "box"
       },
       {
         "type": "image",
-        "id": "junction"
+        "id": "3"
       },
       {
         "type": "vector",
@@ -58,11 +58,11 @@
       },
       {
         "type": "text",
-        "id": "Some challenge"
+        "id": "Cycling"
       },
       {
         "type": "text",
-        "id": "10"
+        "id": "5 km"
       }
     ],
     "modes": {
@@ -73,17 +73,17 @@
             "is-structured": "false",
             "children": [
               "Vector",
-              "6",
-              "7",
-              "bunny",
-              "junction",
+              "place",
+              "0",
+              "box",
+              "3",
               "Vector1",
               "Unlock",
               "challenge",
               "Hint box",
               "ChallengeBox",
-              "Some challenge",
-              "10"
+              "Cycling",
+              "5 km"
             ]
           },
           {
@@ -112,7 +112,7 @@
             "scale": "cover"
           },
           {
-            "id": "6",
+            "id": "place",
             "alignment": {
               "horizontal": {
                 "attachment": "start",
@@ -126,68 +126,18 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "220.0"
+                "value": "220.43701171875"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "248.0"
+                "value": "247.5947265625"
               }
             },
-            "image-content": "6.png",
+            "image-content": "place.png",
             "scale": "cover"
           },
           {
-            "id": "7",
-            "alignment": {
-              "horizontal": {
-                "attachment": "start",
-                "offset": "84.0"
-              },
-              "vertical": {
-                "attachment": "start",
-                "offset": "181.0"
-              }
-            },
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "220.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "248.0"
-              }
-            },
-            "image-content": "7.png",
-            "scale": "cover"
-          },
-          {
-            "id": "bunny",
-            "alignment": {
-              "horizontal": {
-                "attachment": "start",
-                "offset": "84.0"
-              },
-              "vertical": {
-                "attachment": "start",
-                "offset": "181.0"
-              }
-            },
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "220.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "248.0"
-              }
-            },
-            "image-content": "bunny.png",
-            "scale": "cover"
-          },
-          {
-            "id": "junction",
+            "id": "0",
             "alignment": {
               "horizontal": {
                 "attachment": "start",
@@ -201,14 +151,64 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "222.0"
+                "value": "222.1591796875"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "248.0"
+                "value": "247.9072265625"
               }
             },
-            "image-content": "junction.png",
+            "image-content": "0.png",
+            "scale": "cover"
+          },
+          {
+            "id": "box",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "84.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "181.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "221.5850830078125"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "247.5947265625"
+              }
+            },
+            "image-content": "box.png",
+            "scale": "cover"
+          },
+          {
+            "id": "3",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "83.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "181.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "221.0111083984375"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "247.5947265625"
+              }
+            },
+            "image-content": "3.png",
             "scale": "cover"
           },
           {
@@ -233,11 +233,11 @@
             "alignment": {
               "horizontal": {
                 "attachment": "start",
-                "offset": "84.0"
+                "offset": "82.0"
               },
               "vertical": {
                 "attachment": "start",
-                "offset": "624.0"
+                "offset": "608.0"
               }
             },
             "tap-handler": "$on Unlock",
@@ -330,11 +330,11 @@
             "scale": "cover"
           },
           {
-            "id": "Some challenge",
+            "id": "Cycling",
             "alignment": {
               "horizontal": {
                 "attachment": "start",
-                "offset": "122.0"
+                "offset": "99.0"
               },
               "vertical": {
                 "attachment": "start",
@@ -344,11 +344,11 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "168.0"
+                "value": "191.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "50.0"
+                "value": "37.0"
               }
             },
             "color": {
@@ -360,13 +360,12 @@
             "text-content": "$Challenge",
             "overflow": "visible",
             "max-lines": "-1",
-            "text-align": "left",
-            "text-size": "20.0",
-            "line-height": "1.3029999732971191",
+            "text-size": "25.0",
+            "line-height": "1.3030000305175782",
             "typeface": "Inika"
           },
           {
-            "id": "10",
+            "id": "5 km",
             "alignment": {
               "horizontal": {
                 "attachment": "start",
@@ -374,7 +373,7 @@
               },
               "vertical": {
                 "attachment": "start",
-                "offset": "576.0"
+                "offset": "556.0"
               }
             },
             "size-constraints": {
@@ -429,8 +428,8 @@
         "height": 793.0
       },
       "parameters": {
-        "Challenge": "Some challenge",
-        "count ": "10"
+        "Challenge": "Cycling",
+        "count ": "5 km"
       }
     }
   ],

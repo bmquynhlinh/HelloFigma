@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "NnY5JkMtqKhVqHu7id8Y2D",
     "node": "216:2616",
-    "version": "4529007941",
+    "version": "4529091244",
     "component-id": "7f38b348579379afb8b0e78c165789bb9e2f81a0"
   },
   "default": "HintPage",
@@ -15,6 +15,10 @@
         "type": "group",
         "id": "top_level",
         "root": "true"
+      },
+      {
+        "type": "image",
+        "id": "Hint 1"
       },
       {
         "type": "image",
@@ -30,23 +34,19 @@
       },
       {
         "type": "image",
-        "id": "Hint  1 "
+        "id": "Place"
       },
       {
         "type": "image",
-        "id": "6"
+        "id": "box"
       },
       {
         "type": "image",
-        "id": "junction"
+        "id": "3"
       },
       {
         "type": "image",
-        "id": "bunny"
-      },
-      {
-        "type": "image",
-        "id": "7"
+        "id": "0"
       },
       {
         "type": "image",
@@ -68,14 +68,14 @@
             "id": "top_level",
             "is-structured": "false",
             "children": [
+              "Hint 1",
               "Hint 4",
               "Hint 3",
               "Hint 2",
-              "Hint  1 ",
-              "6",
-              "junction",
-              "bunny",
-              "7",
+              "Place",
+              "box",
+              "3",
+              "0",
               "Frame 8",
               "Claim",
               "Hint box"
@@ -86,6 +86,31 @@
               "saturation": "0.0",
               "value": "1.0"
             }
+          },
+          {
+            "id": "Hint 1",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "12.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "181.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "180.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "188.0"
+              }
+            },
+            "image-content": "hint_1.png",
+            "scale": "cover"
           },
           {
             "id": "Hint 4",
@@ -142,111 +167,86 @@
             "alignment": {
               "horizontal": {
                 "attachment": "start",
-                "offset": "200.0"
+                "offset": "192.0"
               },
               "vertical": {
                 "attachment": "start",
-                "offset": "157.0"
+                "offset": "175.0"
               }
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "173.9630126953125"
+                "value": "187.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "211.6123046875"
+                "value": "182.0"
               }
             },
             "image-content": "hint_2.png",
             "scale": "cover"
           },
           {
-            "id": "Hint  1 ",
+            "id": "Place",
             "alignment": {
               "horizontal": {
                 "attachment": "start",
-                "offset": "21.0"
+                "offset": "26.0"
               },
               "vertical": {
                 "attachment": "start",
-                "offset": "157.0"
+                "offset": "201.0"
               }
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "173.962890625"
+                "value": "167.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "211.6123046875"
+                "value": "151.0"
               }
             },
-            "image-content": "hint_1_.png",
+            "image-content": "place.png",
             "scale": "cover"
           },
           {
-            "id": "6",
+            "id": "box",
             "alignment": {
               "horizontal": {
                 "attachment": "start",
-                "offset": "24.0"
+                "offset": "215.0"
               },
               "vertical": {
                 "attachment": "start",
-                "offset": "198.0"
+                "offset": "368.0"
               }
             },
             "size-constraints": {
               "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "161.549560546875"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "154.4423828125"
-              }
-            },
-            "image-content": "6.png",
-            "scale": "cover"
-          },
-          {
-            "id": "junction",
-            "alignment": {
-              "horizontal": {
-                "attachment": "start",
-                "offset": "211.0"
-              },
-              "vertical": {
-                "attachment": "start",
-                "offset": "374.0"
-              }
-            },
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "163.0"
-              },
-              "height-constraints": {
                 "sizing-mode": "fixed",
                 "value": "156.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "162.0"
               }
             },
-            "image-content": "junction.png",
+            "image-content": "box.png",
             "scale": "cover"
           },
           {
-            "id": "bunny",
+            "id": "3",
             "alignment": {
               "horizontal": {
                 "attachment": "start",
-                "offset": "21.0"
+                "offset": "204.0"
               },
               "vertical": {
                 "attachment": "start",
-                "offset": "374.0"
+                "offset": "195.0"
               }
             },
             "size-constraints": {
@@ -256,35 +256,35 @@
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "159.0"
+                "value": "156.0"
               }
             },
-            "image-content": "bunny.png",
+            "image-content": "3.png",
             "scale": "cover"
           },
           {
-            "id": "7",
+            "id": "0",
             "alignment": {
               "horizontal": {
                 "attachment": "start",
-                "offset": "203.0"
+                "offset": "18.0"
               },
               "vertical": {
                 "attachment": "start",
-                "offset": "198.0"
+                "offset": "357.0"
               }
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "160.0"
+                "value": "174.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "152.0"
+                "value": "173.0"
               }
             },
-            "image-content": "7.png",
+            "image-content": "0.png",
             "scale": "cover"
           },
           {

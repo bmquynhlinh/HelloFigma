@@ -42,13 +42,13 @@ class MainActivity : ComponentActivity() {
             HelloFigmaTheme {
                 // Set up the NavHost with a NavController
                 val navController = rememberNavController()
-                val challenge1 = "Example data for Hint1"
+                val challenge1 = "Jump Rope 40"
                 val count1 = "0"
-                val challenge2 = "Example data for Hint2"
+                val challenge2 = "Pushups 10"
                 val count2 = "0"
-                val challenge3 = "Example data for Hint3"
+                val challenge3 = "Cycling 5 km"
                 val count3 = "0"
-                val challenge4 = "Example data for Hint4"
+                val challenge4 = "Hugging Mom"
                 val count4 = "0"
                 val (hintState, setHintState) = remember {
                     mutableStateOf(
@@ -92,7 +92,7 @@ class MainActivity : ComponentActivity() {
                             challenge = challenge1,
                             count = count1,
                             onVector = {
-                                setImageId(R.drawable.hint_1_6)
+                                setImageId(R.drawable.hint_1_place)
                             },
                             onUnlock = {
                                 setHintState(hintState.copy(onOpen1 = true))
@@ -108,10 +108,10 @@ class MainActivity : ComponentActivity() {
                             challenge = challenge2,
                             count = count2,
                             onVector = {
-                                setImageId(R.drawable.hint_1_7)
+                                setImageId(R.drawable.hint_1_3)
                             },
                             onUnlock = {
-                                setHintState(hintState.copy(onOpen1 = true))
+                                setHintState(hintState.copy(onOpen2 = true))
                                 (navController.navigate("hintPage"))} ,
                             initialImageId = imageId
 
@@ -123,10 +123,10 @@ class MainActivity : ComponentActivity() {
                             challenge = challenge3,
                             count = count3,
                             onVector = {
-                                setImageId(R.drawable.hint_1_bunny)
+                                setImageId(R.drawable.hint_1_0)
                             },
                             onUnlock = {
-                                setHintState(hintState.copy(onOpen1 = true))
+                                setHintState(hintState.copy(onOpen3 = true))
                                 (navController.navigate("hintPage"))} ,
                             initialImageId = imageId
 
@@ -139,10 +139,10 @@ class MainActivity : ComponentActivity() {
                             challenge = challenge4,
                             count = count4,
                             onVector = {
-                                setImageId(R.drawable.hint_1_junction)
+                                setImageId(R.drawable.hint_1_box)
                             },
                             onUnlock = {
-                                setHintState(hintState.copy(onOpen1 = true))
+                                setHintState(hintState.copy(onOpen4 = true))
                                 (navController.navigate("hintPage"))} ,
                             initialImageId = imageId
 

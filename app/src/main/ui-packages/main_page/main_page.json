@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "NnY5JkMtqKhVqHu7id8Y2D",
     "node": "204:2533",
-    "version": "4528815946",
+    "version": "4529079072",
     "component-id": "6e7f2653840e6ec047b51e6d3059d2ecf4ca8533"
   },
   "default": "MainPage",
@@ -18,7 +18,7 @@
       },
       {
         "type": "image",
-        "id": "MainpageDesign"
+        "id": "Magic Studio Magic Expand L&P - MOBILE 1"
       },
       {
         "type": "image",
@@ -40,39 +40,14 @@
             "id": "top_level",
             "is-structured": "false",
             "children": [
-              "MainpageDesign",
+              "Magic Studio Magic Expand L&P - MOBILE 1",
               "PlayButton",
               "NewButton",
               "GameCode"
             ]
           },
           {
-            "id": "MainpageDesign",
-            "alignment": {
-              "horizontal": {
-                "attachment": "start",
-                "offset": "-12.0"
-              },
-              "vertical": {
-                "attachment": "start",
-                "offset": "-20.0"
-              }
-            },
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "423.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "827.0"
-              }
-            },
-            "image-content": "mainpage_design.png",
-            "scale": "cover"
-          },
-          {
-            "id": "PlayButton",
+            "id": "Magic Studio Magic Expand L&P - MOBILE 1",
             "alignment": {
               "horizontal": {
                 "attachment": "start",
@@ -80,7 +55,32 @@
               },
               "vertical": {
                 "attachment": "start",
-                "offset": "637.0"
+                "offset": "0.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "403.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "807.0"
+              }
+            },
+            "image-content": "magic_studio_magic_expand_l_p_mobile_1.png",
+            "scale": "cover"
+          },
+          {
+            "id": "PlayButton",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "621.0"
               }
             },
             "tap-handler": "$on PlayButton ",
@@ -102,11 +102,11 @@
             "alignment": {
               "horizontal": {
                 "attachment": "start",
-                "offset": "212.0"
+                "offset": "213.0"
               },
               "vertical": {
                 "attachment": "start",
-                "offset": "637.0"
+                "offset": "621.0"
               }
             },
             "tap-handler": "$on NewButton",
@@ -132,7 +132,7 @@
               },
               "vertical": {
                 "attachment": "start",
-                "offset": "586.0"
+                "offset": "559.0"
               }
             },
             "size-constraints": {

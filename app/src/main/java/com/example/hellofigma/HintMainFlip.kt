@@ -78,9 +78,9 @@ fun Hint1(
     isOpen1: Boolean,
     onHint1: () -> Unit,
     modifier: Modifier = Modifier,
-    initialImageId: Int = R.drawable.hint_1_vector
+    initialImageId: Int = R.drawable.hint_page_hint_1
 ) {
-    var pictureID = if (isOpen1) R.drawable.hint_1_6 else initialImageId
+    var pictureID = if (isOpen1) R.drawable.hint_1_place else initialImageId
     RelayImage(
         image = painterResource(pictureID),
         contentScale = ContentScale.Crop,
@@ -95,9 +95,9 @@ fun Hint2(
     isOpen1: Boolean,
     onHint1: () -> Unit,
     modifier: Modifier = Modifier,
-    initialImageId: Int = R.drawable.hint_1_vector
+    initialImageId: Int = R.drawable.hint_page_hint_2
 ) {
-    var pictureID = if (isOpen1) R.drawable.hint_page_7 else initialImageId
+    var pictureID = if (isOpen1) R.drawable.hint_page_3 else initialImageId
     RelayImage(
         image = painterResource(pictureID),
         contentScale = ContentScale.Crop,
@@ -112,9 +112,9 @@ fun Hint3(
     isOpen1: Boolean,
     onHint1: () -> Unit,
     modifier: Modifier = Modifier,
-    initialImageId: Int = R.drawable.hint_1_vector
+    initialImageId: Int = R.drawable.hint_page_hint_3
 ) {
-    var pictureID = if (isOpen1) R.drawable.hint_page_bunny else initialImageId
+    var pictureID = if (isOpen1) R.drawable.hint_page_0 else initialImageId
     RelayImage(
         image = painterResource(pictureID),
         contentScale = ContentScale.Crop,
@@ -129,9 +129,9 @@ fun Hint4(
     isOpen1: Boolean,
     onHint1: () -> Unit,
     modifier: Modifier = Modifier,
-    initialImageId: Int = R.drawable.hint_1_vector
+    initialImageId: Int = R.drawable.hint_page_hint_4
 ) {
-    var pictureID = if (isOpen1) R.drawable.hint_page_junction else initialImageId
+    var pictureID = if (isOpen1) R.drawable.hint_page_box else initialImageId
     RelayImage(
         image = painterResource(pictureID),
         contentScale = ContentScale.Crop,
